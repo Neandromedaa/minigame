@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import BattleField from './components/Battle/BattleField';
+import Start from './components/Start/Start';
+import End from './components/End/End';
+import './App.scss';
+import { useState } from 'react';
 
 function App() {
+  const [mode, setMode] = useState('start');
+  const [winner, setWinner] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='mainField'>
+      {mode === 'start' && <Start onStartClick={() => setMode('battle')}/>}
+      {mode === 'battle' && <BattleField onBattleEnd={winner => {
+        setWinner(winner);
+        setMode('end')
+      }}/>}
+      {mode === 'end' && <End winner={winner}/>}
     </div>
   );
 }

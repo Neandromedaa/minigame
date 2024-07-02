@@ -1,0 +1,50 @@
+.battleField {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: darkcyan;
+}
+
+.battleField__players{ 
+    display: flex;
+
+}
+
+.playerField {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playerField__healthBar {
+    width: 90%;
+    height: 10%;
+    background-color: burlywood;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    overflow: hidden;
+
+    .healthBar__label {
+        height: 100%;
+        background-color: azure;
+    }
+
+    .healthBar__bar {
+        height: 100%;
+        background-color: brown;
+    }
+}
+
+.playerField__img{
+    width: 10vw;
+    height: 10vw;
+}
