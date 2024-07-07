@@ -1,3 +1,3 @@
-weather-app-pi-lime-85.vercel.app
+minigame-ruddy.vercel.app
 
-Простое приложение прогноза погоды
+Мини-игра для telegram mini app, основа без стилей с минимальным базовым функционалом
