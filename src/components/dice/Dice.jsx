@@ -1,8 +1,9 @@
 import React from 'react';
 
 function Dice({ dice }) {
+  console.log(dice);
   return (
-    <div>{dice || 'Dice'}</div>
+    <div>{dice === undefined ? 'Dice' : dice}</div>
   );
 }
 

@@ -19,8 +19,9 @@ export const useBattleSequence = sequence => {
                 case 'dice': {
                     const diceDamage = dice();
                     // console.log(diceDamage.diceResult, 'diceRoll.result')
+                    
                     setDiceRoll(diceDamage.diceResult);
-                   
+                    console.log(diceRoll, 'diceDamage.diceResult', turn);
                     (async () => {
                         setInSequence(true);
                         // setHeroAction('dice');
@@ -44,7 +45,9 @@ export const useBattleSequence = sequence => {
                 }
                 case 'damageSkill':{
                     const damageSkillDamage = damageSkill();
+                    
                     setDiceRoll(damageSkillDamage.diceResult);
+                    console.log(diceRoll, 'damageSkill.diceResult');
                     (async () => {
                         setInSequence(true);
                         // setDiceRoll(damageSkillDamage.diceResult);
@@ -68,7 +71,9 @@ export const useBattleSequence = sequence => {
                 }
                 case 'heal':{
                     const healSkill = heal();
+                    
                     setDiceRoll(healSkill.diceResult);
+                    console.log(diceRoll, 'healSkill.diceResult');
                     // console.log(healSkill, healSkill.result, healSkill.diceResult);
                     (async () => {
                         setInSequence(true);
